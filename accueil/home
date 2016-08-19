@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.sommaire {
+    float: left;
+    margin: 0%;
+    padding: 0px;
+    min-width: 400px;
+    max-width: 33.33%;
+    height: 1000px;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: white;
+    background-color: black;
+}
+
+img {
+  width: 100%;
+  opacity:0.5;
+  vertical-align: bottom;
+}
+</style>
+</head>
+<body>
+
+<!-- barre de menu -->
+
+<h1 style="text-align:center">La Physique Pour Tous</h1>
+<ul>
+  <li><a class="active" href="accueil">Accueil</a></li>
+  <li><a href="#Vulgarisation">Vulgarisation</a></li>
+  <li><a href="cours">Cours</a></li>
+  <li><a href="#Histoire">Histoire des sciences</a></li>
+</ul>
+
+<!-- Sommaire -->
+<div class="sommaire" style="background-color:#3333ff;color:white;">
+  <a href="">
+	 <h2 style="background-color:#0000ff;padding:20px;text-align:center;text-decoration:none">Vulgarisation</h2>
+  </a>
+
+  <p style="padding:10px;"> Vous vous posez des questions sur le fonctionnement de la nature. Vous vous intéressez à un sujet en particulier mais ne voulez pas vous embéter avec les mathématiques. Nos sujet de vulgarisation sont parfait pour vous.</p>
+  <p style="padding:10px;">Venez découvrir la vie et la mort des étoiles, la relativité, la physique quantique et de nombreux autre sujets sans devoir rentrer dans des calculs compliqués. Votre curiosité est le seul prérequis alors n'attendez pas et laissez vous tenter!</p>
+  <img src="logo_vulg.jpg">
+
+</div>
+
+<div class="sommaire" style="background-color:#ff5c33;color:white;">
+  <a href="cours">
+    <h2 style="background-color:#ff4000;padding:20px;text-align:center">Cours</h2>
+  </a>
+
+  <p style="padding:10px;">Vous êtes étudiant en physique, pationné par les sciences ou vous avez simplement déjà explorer nos sujets de vulgarisation et désirez aller plus loin alors n'hésitez pas et plongez dans nos cours de physique.</p>
+  <p style="padding:10px;"> Ces derniers vont de sujets de base comme la mécanique à des sujets avancés utilisés tout les jours par des chercheurs en physique.</p>
+  <img src="logo_cour.jpg">
+
+</div>
+
+<div class="sommaire" style="background-color:#009933;color:white;">
+  <a href="">
+    <h2 style="background-color:#00802b;padding:20px;text-align:center">Histoire des Sciences</h2>
+  </a>
+  <p style="padding:10px;">Notre connaissance de la physique n'a pas toujours été ce qu'elle est aujourd'hui. L'évolution des techniques et des concept est une façon pationnante de découvrir les sciences. </p>
+  <p style="padding:10px;"> Dans cette catégorie vous découvrirez comment nos ancêtres on réussit à faire avancer la science avec des moyens rudimentaires parfois à contre courant des théories admises.</p>
+  <img src="logo_hist.jpg">
+
+</div>
+
+
+</body>
+</html>

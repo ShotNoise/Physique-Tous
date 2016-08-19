@@ -65,7 +65,7 @@ article {
     overflow: hidden;
 }
 
-li button {
+li a {
     background-color:transparent;
     display: block;
     border: none;
@@ -74,10 +74,6 @@ li button {
     text-decoration: none;
     padding: 16px;
     cursor: pointer;
-}
-
-li button:hover {
-    background-color:black;
 }
 
 </style>
@@ -120,9 +116,9 @@ function MC() {
 
 <h1 style="text-align:center">La Physique Pour Tous</h1>
 <ul>
-  <li style=float:left><a class="active" href="accueil">Accueil</a></li>
+  <li style=float:left><a class="active" href="F:/SiteWeb/accueil/home">Accueil</a></li>
   <li style=float:left><a href="#Vulgarisation">Vulgarisation</a></li>
-  <li style=float:left><a href="cours">Cours</a></li>
+  <li style=float:left><a href="F:/SiteWeb/accueil/courses">Cours</a></li>
   <li style=float:left><a href="#Histoire">Histoire des sciences</a></li>
 </ul>
 
@@ -134,11 +130,11 @@ function MC() {
   
 <nav>
   <ul>
-    <li><button type="button" onclick="Meca()" >Mécanique</button></li>
-    <li><button type="button" onclick="Thermo()">Thermodynamique</button></li>
-    <li><button>Electrocinétique</button></li>
-    <li><button>Optique</button></li>
-    <li><button>Mécanique des Fluides</button></li>
+    <li><a href="F:/SiteWeb/Cours/Mecanique" onmouseover="Meca()" >Mécanique</a></li>
+    <li><a onmouseover="Thermo()">Thermodynamique</a></li>
+    <li><a href="">Electrocinétique</a></li>
+    <li><a href="">Optique</a></li>
+    <li><a>Mécanique des Fluides</a></li>
 
   </ul>
 </nav>
@@ -160,10 +156,10 @@ function MC() {
   
 <nav>
   <ul>
-    <li><button type="button" onclick="quantique()" >Physique Quantique</button></li>
-    <li><button type="button" onclick="stat()">Physique Statistique</button></li>
-    <li><button type="button">Electromagnétisme</button></li>
-    <li><button type="button" onclick="Meca()">Relativité</button></li>
+    <li><a onmouseover="quantique()" >Physique Quantique</a></li>
+    <li><a onmouseover="stat()">Physique Statistique</a></li>
+    <li><a>Electromagnétisme</a></li>
+    <li><a>Relativité</a></li>
   </ul>
 </nav>
 
@@ -184,10 +180,10 @@ function MC() {
   
 <nav>
   <ul>
-    <li><button type="button" onclick="MC()">Matière Condensée</button></li>
-    <li><button type="button" onclick="PP()">Physique des Particules</button></li>
-    <li><button type="button">Astrophysique</button></li>
-    <li><button type="button">Optique Quantique</button></li>
+    <li><a onmouseover="MC()">Matière Condensée</a></li>
+    <li><a onmouseover="PP()">Physique des Particules</a></li>
+    <li><a>Astrophysique</a></li>
+    <li><a>Optique Quantique</a></li>
 
   </ul>
 </nav>

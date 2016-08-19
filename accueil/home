@@ -72,9 +72,9 @@ img {
 
 <h1 style="text-align:center">La Physique Pour Tous</h1>
 <ul>
-  <li><a class="active" href="accueil">Accueil</a></li>
+  <li><a class="active" href="F:/SiteWeb/accueil/home">Accueil</a></li>
   <li><a href="#Vulgarisation">Vulgarisation</a></li>
-  <li><a href="cours">Cours</a></li>
+  <li><a href="F:/SiteWeb/accueil/courses">Cours</a></li>
   <li><a href="#Histoire">Histoire des sciences</a></li>
 </ul>
 
@@ -86,18 +86,18 @@ img {
 
   <p style="padding:10px;"> Vous vous posez des questions sur le fonctionnement de la nature. Vous vous intéressez à un sujet en particulier mais ne voulez pas vous embéter avec les mathématiques. Nos sujet de vulgarisation sont parfait pour vous.</p>
   <p style="padding:10px;">Venez découvrir la vie et la mort des étoiles, la relativité, la physique quantique et de nombreux autre sujets sans devoir rentrer dans des calculs compliqués. Votre curiosité est le seul prérequis alors n'attendez pas et laissez vous tenter!</p>
-  <img src="logo_vulg.jpg">
+  <img src="images/logo_vulg.jpg">
 
 </div>
 
 <div class="sommaire" style="background-color:#ff5c33;color:white;">
-  <a href="cours">
+  <a href="F:/SiteWeb/accueil/courses">
     <h2 style="background-color:#ff4000;padding:20px;text-align:center">Cours</h2>
   </a>
 
   <p style="padding:10px;">Vous êtes étudiant en physique, pationné par les sciences ou vous avez simplement déjà explorer nos sujets de vulgarisation et désirez aller plus loin alors n'hésitez pas et plongez dans nos cours de physique.</p>
   <p style="padding:10px;"> Ces derniers vont de sujets de base comme la mécanique à des sujets avancés utilisés tout les jours par des chercheurs en physique.</p>
-  <img src="logo_cour.jpg">
+  <img src="images/logo_cour.jpg">
 
 </div>
 
@@ -107,7 +107,7 @@ img {
   </a>
   <p style="padding:10px;">Notre connaissance de la physique n'a pas toujours été ce qu'elle est aujourd'hui. L'évolution des techniques et des concept est une façon pationnante de découvrir les sciences. </p>
   <p style="padding:10px;"> Dans cette catégorie vous découvrirez comment nos ancêtres on réussit à faire avancer la science avec des moyens rudimentaires parfois à contre courant des théories admises.</p>
-  <img src="logo_hist.jpg">
+  <img src="images/logo_hist.jpg">
 
 </div>
 

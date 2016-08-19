@@ -11,6 +11,19 @@ ul {
     background-color: #333333;
 }
 
+ul.floating {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    position:fixed;
+    top:250;
+    width:150px;
+    float:center;
+}
+
+
 li {
     float: center;
 }
@@ -92,10 +105,14 @@ li button:hover {
   <li style=float:left><a href="#Histoire">Histoire des sciences</a></li>
 </ul>
 
-<div class="container">
+<ul class="floating">
+  <li><a class="active" href="F:/SiteWeb/accueil/home">Accueil</a></li>
+  <li><a href="#Vulgarisation">Vulgarisation</a></li>
+  <li><a href="F:/SiteWeb/accueil/courses">Cours</a></li>
+  <li><a href="#Histoire">Histoire des sciences</a></li>
+</ul>
+<div style="height:6000px">
 
-
+</div>
 </body>
 </html>
-
-

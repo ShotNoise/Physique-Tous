@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="F:/SiteWeb/classes/classes.css">
+
+<style>
+</style>
+
+</head>
+<body>
+
+<script>
+function Meca() { 
+    document.getElementById("titre_base").innerHTML = "Mécanique";
+    document.getElementById("contenu_base").innerHTML = "La mécanique c'est cool. Aucun prérequis c'est pour ça que c'est cool.";
+}
+
+function Thermo() { 
+    document.getElementById("titre_base").innerHTML = "Thermodynamique";
+    document.getElementById("contenu_base").innerHTML = "La thermo c'est chaud";
+}
+
+function quantique() { 
+    document.getElementById("titre_appro").innerHTML = "Physique Quantique";
+    document.getElementById("contenu_appro").innerHTML = "La quantique c'est fantastique";
+}
+
+function stat() { 
+    document.getElementById("titre_appro").innerHTML = "Physique Statistique";
+    document.getElementById("contenu_appro").innerHTML = "La stat c'est plate";
+}
+
+function PP() { 
+    document.getElementById("titre_avanc").innerHTML = "Physique des Particules";
+    document.getElementById("contenu_avanc").innerHTML = "De la rigolade!";
+}
+
+function MC() { 
+    document.getElementById("titre_avanc").innerHTML = "Matière Condensée";
+    document.getElementById("contenu_avanc").innerHTML = "ça! là! ba c'est bin dure!";
+}
+
+</script>
+
+
+<h1 style="text-align:center">La Physique Pour Tous</h1>
+<ul class="home">
+  <li><a href="F:/SiteWeb/accueil/home.html">Accueil</a></li>
+  <li><a href="#Vulgarisation">Vulgarisation</a></li>
+  <li><a href="F:/SiteWeb/accueil/courses.html">Cours</a></li>
+  <li><a href="#Histoire">Histoire des sciences</a></li>
+</ul>
+
+<div class="container">
+
+<header>
+   <h1>Cours de Base</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="F:/SiteWeb/Cours/Mecanique.html" onmouseover="Meca()" >Mécanique</a></li>
+    <li><a href="#F:/SiteWeb/Cours/test" onmouseover="Thermo()">Thermodynamique</a></li>
+    <li><a href="">Electrocinétique</a></li>
+    <li><a href="">Optique</a></li>
+    <li><a href="">Mécanique des Fluides</a></li>
+
+  </ul>
+</nav>
+
+<article>
+  <h1 id="titre_base"></h1>
+  <p id="contenu_base">La base de la physique ce trouve ici!</p>
+</article>
+
+<footer>Ahhhh! la vie...</footer>
+
+</div>
+
+<div class="container">
+
+<header>
+   <h1>Cours Approfondis</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="" onmouseover="quantique()" >Physique Quantique</a></li>
+    <li><a href="" onmouseover="stat()">Physique Statistique</a></li>
+    <li><a href="" >Electromagnétisme</a></li>
+    <li><a href="">Relativité</a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1 id="titre_appro"></h1>
+  <p id="contenu_appro">icit c'est approfondi</p>
+</article>
+
+<footer>Ahhhh! la vie...</footer>
+
+</div>
+
+<div class="container">
+
+<header>
+   <h1>Cours Avancés</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="" onmouseover="MC()">Matière Condensée</a></li>
+    <li><a href="" onmouseover="PP()">Physique des Particules</a></li>
+    <li><a href="">Astrophysique</a></li>
+    <li><a href="">Optique Quantique</a></li>
+
+  </ul>
+</nav>
+
+<article>
+  <h1 id="titre_avanc"></h1>
+  <p id="contenu_avanc">icit c'est dure dure</p>
+</article>
+
+<footer>Ahhhh! la vie...</footer>
+
+</div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,81 @@
+
+/*Top page menu*/
+ul.home {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li.home {
+    float: center;
+}
+
+li.home a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li.home a:hover {
+    color: white;
+    background-color: black;
+}
+
+/*Page de cours*/
+	/* Floating menu */
+ul.floating {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position:fixed;
+    top:250;
+    width:250px;
+    float:center;
+}
+
+li.floating {
+    float: left;
+}
+
+li.floating a {
+    display: block;
+    color: red;
+    text-align: left;
+    padding: 5px;
+    text-decoration: none;
+}
+
+li.floating a:hover {
+    color: black;
+    background-color: white;
+}
+
+nav.floating {
+    float: left;
+    max-width: 200px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav.floating {
+    background-color:black ;
+    border:2px;
+}
+
+
+/*zone d'écriture du cours*/
+article.cours {
+    margin-left: 250px;
+    border-right: 5px solid gray;
+    border-left: 5px solid gray;
+    padding: 1em;
+    overflow: hidden;
+    position: right;
+    width:calc(100% - 100px);
+}

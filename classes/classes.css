@@ -107,6 +107,22 @@ article.cours {
     width:calc(100% - 242px);
 }
 
+div.theoreme {
+	border-left: 10px solid orange;
+	background: #a6a6a6;
+	border-radius: 10px;
+
+}
+div.theoreme header {
+	background: #bfbfbf; 
+	color:#b35900;
+	border-radius: 0px 10px 0px 0px;
+	text-align: center;
+	padding: 5px
+}
+div.theoreme p {
+	padding: 5px
+}
 /*page de selection*/
 	/*menu de selection de la matière*/
 div.container {
@@ -163,3 +179,5 @@ div.container li a:hover {
     color: white;
     background-color: black;
 }
+
+

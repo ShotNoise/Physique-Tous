@@ -77,7 +77,7 @@ nav.floating ul {
     background-color: white;
     position:fixed;
     top:250;
-    width:100px;
+    width:150px;
     float:center;
 }
 
@@ -95,6 +95,10 @@ nav.floating li a {
 
 nav.floating li a:hover {
     color: black;
+}
+
+nav.floating h3 {
+	color: green;
 }
 
 /*zone d'écriture du cours*/

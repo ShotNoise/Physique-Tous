@@ -40,27 +40,37 @@
 
 <article class="cours" style="height:6000px">
     <h2>Introduction.</h2>
-    <p>La mécanique Lagrangienne n'est en elle même qu'une reformulation de la mécanique Newtonnienne à partir d'un principe que l'on appelle "principe de moindre action".
-  Dans ce cours nous reverrons donc tous les concepts introduits dans le cours sur la mécanique Newtonienne. 
-  Même si aucun prérequis n'est strictement nécessaire pour suivre ce cours, il est préférable d'avoir déjà une bonne connaissance des grandeurs utilisées en Mécanique.
-  Je conseil donc de commencer votre lecture par la mécanique Newtonienne.</p>
-    <p>Présenté comme cela on pourrait avoir l'impression que la mécanique Lagrangienne est de peu d'intérêt. Détrompez-vous.
-  Premièrement cette formulation de la mécanique va pouvoir être reprise dans d'autres domaines de la physique comme l'optique géométrique ou l'électromagnétisme unifiant ainsi différant concepts.
-  De plus nous verrons dans des cours plus avancés que le formalisme lagrangien permet un passage élégant vers la mécanique quantique.
-   </p>
-    <p>Nous commencerons (chapitre 1) par présenter la principe de moindre action, puis à l'aide d'argument de symétrie nous poserons la forme des premiers lagrangiens.
-      Nous relierons ensuite les symétries de l'espace et du temps à des invariants du mouvement (chapitre 2) que l'on appelle intégrales première.
-  A ce stade nous aurons retrouvé toutes les équations que nous avons utilisé en mécanique Newtonienne.
-  Il restera à réécrire une dernière fois ces équations (chapitre 3) de manière plus symétrique à l'aide de nouvelles variables, nous trouverons ainsi des équations appelées équations canoniques qui permettent un liens élégant entre mécanique classique et quantique. </p>
-  
+      <p>
+        La mécanique Lagrangienne n'est en elle même qu'une reformulation de la mécanique Newtonnienne à partir d'un principe que l'on appelle "principe de moindre action".
+        Dans ce cours nous reverrons donc tous les concepts introduits dans le cours sur la mécanique Newtonienne. 
+        Même si aucun prérequis n'est strictement nécessaire pour suivre ce cours, il est préférable d'avoir déjà une bonne connaissance des grandeurs utilisées en Mécanique.
+        Je conseil donc de commencer votre lecture par la mécanique Newtonienne.</p>
+      <p>
+        Présenté comme cela on pourrait avoir l'impression que la mécanique Lagrangienne est de peu d'intérêt. Détrompez-vous.
+        Premièrement cette formulation de la mécanique va pouvoir être reprise dans d'autres domaines de la physique comme l'optique géométrique ou l'électromagnétisme unifiant ainsi différant concepts.
+        De plus nous verrons dans des cours plus avancés que le formalisme lagrangien permet un passage élégant vers la mécanique quantique.
+      </p>
+      <p>
+        Nous commencerons (chapitre 1) par présenter la principe de moindre action, puis à l'aide d'argument de symétrie nous poserons la forme des premiers lagrangiens.
+        Nous relierons ensuite les symétries de l'espace et du temps à des invariants du mouvement (chapitre 2) que l'on appelle intégrales première.
+        A ce stade nous aurons retrouvé toutes les équations que nous avons utilisé en mécanique Newtonienne.
+        Il restera à réécrire une dernière fois ces équations (chapitre 3) de manière plus symétrique à l'aide de nouvelles variables, nous trouverons ainsi des équations appelées équations canoniques qui permettent un liens élégant entre mécanique classique et quantique. 
+      </p>
+
     <h2>Principe de Moindre Action.</h2>
-    <h3>Lagrangien et Action.</h3>
-    Un système physique ...
-    <div class="theoreme">
-        <header>Forme de l'action:</header>
+      <h3>Lagrangien et Action.</h3>
         <p>
-            $$S=\int_{t_1}^{t_2} L(q,\dot{q},t)dt$$
+          Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
+          Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
+          La position de toute les particules d'un système de $$N$$ particules est donnés par les $$3N$$ coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés $$s$$ nécessaire pour le décrire est donc en générale plus faible que les 3N coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: $$(q_1,q_2,...,q_s)$$. 
+          La donné de l'ensemble des $${q}$$ à un instant $$t$$ n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des $s$ composantes des vitesses généralisées $${\dot{q}}$$ sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de newton permettent de calculer les accélérations.
         </p>
+        <div class="theoreme">
+        <header>Forme de l'action:</header>
+          <p>
+            $$S=\int_{t_1}^{t_2} L(q,\dot{q},t)dt$$
+          </p>
+        </div>
 </article>
 </body>
 </html>

@@ -67,15 +67,21 @@
           Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
           La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
           La donné de l'ensemble des \(q\) à un instant \(t\) n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des \(s\) composantes des vitesses généralisées \(\dot{q}\) sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de newton permettent de calculer les accélérations.
-          Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\).
+        </p>
+        <p>
+          Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
         </p>
         <div class="theoreme">
         <header>Forme de l'action:</header>
           <p>
-            Il existe une fonction S appelée action qui est l'intégrale entre les deux instants d'une fonction L appelé lagrangien. L'action décrit une trajectoire dans l'espace des phases.
             $$S=\int_{t_1}^{t_2} L(q,\dot{q},t)dt$$
           </p>
-        </div>
+        <\div>
+        <p>
+          L'action décrit une trajectoire particulière que le système peut suivre dans l'espace des phases et qui dépend de l'ensemble des positions et vitesses généralisés au différents instant entre \(t_1\) et \(t_2\). Le principe de moindre action stipule que parmis l'ensemble des trajectoires de l'espace des phases, la trajectoire emprunté par le système est celle qui minimise (ou maximise) l'action. D'un point de vue mathematique on traduit cela par un principe variationel. Supposons que la trajectoire qui minimise l'action et donnée par un ensemble \(Q,\dot{Q}\) et faisons varier une des coordonnés généralisé de \(\delta q_i\) autour de l'équilibre. Cela entraine une variation de l'action donnée par:
+          $$\delta S=\int_{t_1}^{t_2} L(Q_1,...,Q_i+\delta q_i,...\dot{q}_1,...,\dot{Q_i}+\delta\dot{q_i},...,\dot{Q}_s,t)-L(Q,\dot{Q})dt$$
+          Le principe de moindre action ce compose de deux hypothèses, l'existance du Lagrangien (et de l'action)
+         <\p>
 </article>
 </body>
 </html>

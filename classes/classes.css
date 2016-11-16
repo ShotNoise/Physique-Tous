@@ -20,8 +20,8 @@ ul.home li a {
 }
 
 ul.home li a:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #b35900;
 }
 
 /*Page d'accueil*/
@@ -87,18 +87,20 @@ nav.floating li {
 
 nav.floating li a {
     display: block;
-    color: red;
+    color: black;
     text-align: left;
     padding: 5px;
     text-decoration: none;
 }
 
 nav.floating li a:hover {
-    color: black;
+    display:block;
+    color:black;
+    background-color: #bfbfbf;
 }
 
 nav.floating h3 {
-	color: green;
+	color: #b35900;
 }
 
 /*zone d'écriture du cours*/
@@ -112,7 +114,7 @@ article.cours {
 }
 
 div.theoreme {
-	border-left: 10px solid orange;
+	border-left: 10px solid #b35900;
 	background: #a6a6a6;
 	border-radius: 10px;
 
@@ -133,14 +135,15 @@ div.container {
     width: 100%;
 }
 
-div.container header {background: black;color:white;}
+div.container header {background: white;color:#b35900;}
 div.container footer {background: #aaa;color:white;}
 
 div.container header, footer {
-    padding: 1em;
-    color: white;
+    padding-left: 1em;
     clear: left;
-    text-align: center;
+    text-align: left;
+    border-bottom:5px solid grey;
+
 }
 
 div.container nav {
@@ -180,8 +183,8 @@ div.container li a {
 }
 
 div.container li a:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #b35900;
 }
 
 

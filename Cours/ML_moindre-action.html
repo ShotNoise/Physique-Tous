@@ -97,7 +97,7 @@ Cela se traduit par une variation de l'action
           Puisque par hypothèse \(L(Q,\dot{Q})\) minimise l'action la variation autour de ce minimum doit être nulle. En développant au premier ordre en \(\delta q\) on obtient:
           $$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i+\frac{\partial L}{\partial \dot{q_i}}\delta \dot{q_i}\right) dt=0$$
           En intégrant pas partie le deuxième terme de l'intégrant on obtient:
-          $$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right) dt+\left[\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right]^{t_1}_{t_2}=0$$
+          $$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right) dt+\left[\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right]^{t_2}_{t_1}=0$$
           Puisque en \(t_1\) et \(t_2\) la variation est nulle le second terme s'annule. Cette équation doit être vrai quelque soit \(\delta q_i\) on en déduit donc que l'intégrant doit être nul.
 </div>
 
@@ -112,6 +112,15 @@ Cela se traduit par une variation de l'action
         </div>
         <p>  
         <h3>Référentiels d'Inertie</h3>
+  <p>
+  Afin de décrire un mouvement nous avons besoin de définir un système d'axe permettant de repérer la position des particules. Ce système d'axe est appelé référentiel. Il y a une infinité de choix de référentiel possible mais il éxiste certain référentiels dans lesquels le temps et l'espace sont homogène et isotrope. On appelle ces référentiels des référentiels d'inertie, il sont très prisés des physiciens car les lois de la physique s'y expriment sous une forme simplifié. 
+   </p>
+  <p>
+    Prenons l'exemple d'une particule isolée dans un tel référentiel. Puisque l'espace est homogène les lois de la physique ne doivent pas dépendre de la position de la particule. De plus l'espace est également isotrope on en déduit que le lagrangien est uniquement fonction du module de la vitesse ou encore du carré de la vitesse de la particule, \(L(v^2)\). En injectant ce lagrangien dans les équations d'Euler Lagrange on obtient:
+   $$\frac{d}{dt}\frac{\partial L}{\partial v}=0$$ 
+   ce qui entraine:
+   $$\frac{\partial L}{\partial v}=cste$$
+   La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vect{v}=cste\)
         <h3>Force et Energie</h3>
 </article>
 </body>

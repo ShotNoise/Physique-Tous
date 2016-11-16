@@ -45,86 +45,101 @@
 
 
 <article class="cours" style="height:6000px">
-    <h2>Introduction.</h2>
-      <p>
+<h2>Introduction.</h2>
+	<p>
         La mécanique Lagrangienne n'est en elle même qu'une reformulation de la mécanique Newtonnienne à partir d'un principe que l'on appelle "principe de moindre action".
         Dans ce cours nous reverrons donc tous les concepts introduits dans le cours sur la mécanique Newtonienne. 
         Même si aucun prérequis n'est strictement nécessaire pour suivre ce cours, il est préférable d'avoir déjà une bonne connaissance des grandeurs utilisées en Mécanique.
-        Je conseil donc de commencer votre lecture par la mécanique Newtonienne.</p>
-      <p>
+        Je conseil donc de commencer votre lecture par la mécanique Newtonienne.
+	</p>
+	<p>
         Présenté comme cela on pourrait avoir l'impression que la mécanique Lagrangienne est de peu d'intérêt. Détrompez-vous.
         Premièrement cette formulation de la mécanique va pouvoir être reprise dans d'autres domaines de la physique comme l'optique géométrique ou l'électromagnétisme unifiant ainsi différant concepts.
         De plus nous verrons dans des cours plus avancés que le formalisme lagrangien permet un passage élégant vers la mécanique quantique.
-      </p>
-      <p>
+	</p>
+	<p>
         Nous commencerons (chapitre 1) par présenter la principe de moindre action, puis à l'aide d'argument de symétrie nous poserons la forme des premiers lagrangiens.
         Nous relierons ensuite les symétries de l'espace et du temps à des invariants du mouvement (chapitre 2) que l'on appelle intégrales première.
         A ce stade nous aurons retrouvé toutes les équations que nous avons utilisé en mécanique Newtonienne.
         Il restera à réécrire une dernière fois ces équations (chapitre 3) de manière plus symétrique à l'aide de nouvelles variables, nous trouverons ainsi des équations appelées équations canoniques qui permettent de faire le lien entre mécanique classique et quantique. 
-      </p>
+	</p>
 
-    <h2>Principe de Moindre Action.</h2>
-    <h3>Equation du Mouvement.</h3>
-        <p>
+<h2>Principe de Moindre Action.</h2>
+	<h3>Equation du Mouvement.</h3>
+        	<p>
           Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
           Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
           La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
           La donné de l'ensemble des \(q\) à un instant \(t\) n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des \(s\) composantes des vitesses généralisées \(\dot{q}\) sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de newton permettent de calculer les accélérations.
-        </p>
-        <p>
+        	</p>
+        	<p>
           Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
-        </p>
-        <div class="theoreme">
-        <header>Forme de l'action:</header>
-          <p>
-            $$S=\int_{t_1}^{t_2} L(q,\dot{q},t)dt$$
-          </p>
-        </div>
-        <p>
+        
+		</p>
+        	<div class="theoreme">
+        		<header>Forme de l'action:</header>
+         	 	<p>
+            		$$S=\int_{t_1}^{t_2} L(q,\dot{q},t)dt$$
+          		</p>
+        	</div>
+        	<p>
+
           L'action décrit une trajectoire particulière que le système peut suivre dans l'espace des phases et qui dépend de l'ensemble des positions et vitesses généralisés au différents instant entre \(t_1\) et \(t_2\). Le principe de moindre action stipule que parmis l'ensemble des trajectoires de l'espace des phases, la trajectoire emprunté par le système est celle qui minimise (ou maximise) l'action. En résumé le principe de moindre action ce compose de deux hypothèses l'existance du Lagrangien (et de l'action) et le fait que le système suit toujours une trajectoire qui minimise l'action. A partir de ce principe de moindre action on peut trouver des équations du mouvement qui regissent la trajectoire du système:
-        </p>
+        	</p>
   
-       <button data-toggle="collapse" data-target="#demo">Démonstration:</button>
+       		<button data-toggle="collapse" data-target="#demo">Démonstration:</button>
 
-<div id="demo" class="collapse">
+		<div id="demo" class="collapse">
           D'un point de vue mathematique on traduit le principe de moindre action par un principe variationel. Supposons que la trajectoire qui minimise l'action soit donnée par un ensemble de coordonnées et vitesses généralisées \( (Q,\dot{Q})\) et faisons varier une des coordonnés généralisé de \(\delta q_i\) autour de l'équilibre en gardant les extrémités de la trajectoire fixes:
-          $$q_i=Q_i+\delta q_i$$
-          $$\dot{q}_i=\dot{Q_i}+\delta \dot{q_i}$$
-Avec:
-  $$\delta q_i(t_1)=\delta q_i(t_2)=0$$
-Cela se traduit par une variation de l'action
-          $$\delta S=\int_{t_1}^{t_2} L(Q_1,...,Q_i+\delta q_i,...\dot{q}_1,...,\dot{Q_i}+\delta\dot{q_i},...,\dot{Q}_s,t)-L(Q,\dot{Q})dt=0$$
-          Puisque par hypothèse \(L(Q,\dot{Q})\) minimise l'action la variation autour de ce minimum doit être nulle. En développant au premier ordre en \(\delta q\) on obtient:
-          $$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i+\frac{\partial L}{\partial \dot{q_i}}\delta \dot{q_i}\right) dt=0$$
-          En intégrant pas partie le deuxième terme de l'intégrant on obtient:
-          $$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right) dt+\left[\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right]^{t_2}_{t_1}=0$$
-          Puisque en \(t_1\) et \(t_2\) la variation est nulle le second terme s'annule. Cette équation doit être vrai quelque soit \(\delta q_i\) on en déduit donc que l'intégrant doit être nul.
-</div>
 
-          <p>
+        $$q_i=Q_i+\delta q_i$$
+        $$\dot{q}_i=\dot{Q_i}+\delta \dot{q_i}$$
+
+	Avec:
+	$$\delta q_i(t_1)=\delta q_i(t_2)=0$$
+Cela se traduit par une variation de l'action
+        
+	$$\delta S=\int_{t_1}^{t_2} L(Q_1,...,Q_i+\delta q_i,...\dot{q}_1,...,\dot{Q_i}+\delta\dot{q_i},...,\dot{Q}_s,t)-L(Q,\dot{Q})dt=0$$
+        Puisque par hypothèse \(L(Q,\dot{Q})\) minimise l'action la variation autour de ce minimum doit être nulle. En développant au premier ordre en \(\delta q\) on obtient:
+        
+	$$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i+\frac{\partial L}{\partial \dot{q_i}}\delta \dot{q_i}\right) dt=0$$
+
+        En intégrant pas partie le deuxième terme de l'intégrant on obtient:
+        
+	$$\int_{t_1}^{t_2} \left(\frac{\partial L}{\partial q_i}\delta q_i-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right) dt+\left[\frac{\partial L}{\partial \dot{q_i}}\delta q_i\right]^{t_2}_{t_1}=0$$
+
+        Puisque en \(t_1\) et \(t_2\) la variation est nulle le second terme s'annule. Cette équation doit être vrai quelque soit \(\delta q_i\) on en déduit donc que l'intégrant doit être nul.
+		</div>
+
+          	<p>
           On obtient ainsi un système de  \(s\) équations couplées (une pour chaque degré de liberté \(q_i\)) que l'on nomme équations d'Euler Lagrange et qui caractérisent la trajectoire du système:
-        </p>       
-           <div class="theoreme">
-        <header>Equations d'Euler-Lagrange:</header>
-          <p>
-            $$\frac{\partial L}{\partial q_i}-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}=0$$
-          </p>
-        </div>
-        <p>  
-        <h3>Référentiels d'Inertie</h3>
-  <p>
+        	</p>       
+           	<div class="theoreme">
+        	<header>Equations d'Euler-Lagrange:</header>
+          	<p>
+
+            	$$\frac{\partial L}{\partial q_i}-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}=0$$
+          	</p>
+        	</div>
+ 		<p>  
+	<h3>Référentiels d'Inertie</h3>
+		<p>
   Afin de décrire un mouvement nous avons besoin de définir un système d'axe permettant de repérer la position des particules. Ce système d'axe est appelé référentiel. Il y a une infinité de choix de référentiel possible mais il éxiste certain référentiels dans lesquels le temps et l'espace sont homogène et isotrope. On appelle ces référentiels des référentiels d'inertie, il sont très prisés des physiciens car les lois de la physique s'y expriment sous une forme simplifié. 
-   </p>
-  <p>
+		</p>
+		<p>
     Prenons l'exemple d'une particule isolée dans un tel référentiel. Puisque l'espace est homogène les lois de la physique ne doivent pas dépendre de la position de la particule. De plus l'espace est également isotrope on en déduit que le lagrangien est uniquement fonction du module de la vitesse ou encore du carré de la vitesse de la particule, \(L(v^2)\). En injectant ce lagrangien dans les équations d'Euler Lagrange on obtient:
+
    $$\frac{d}{dt}\frac{\partial L}{\partial \vec{v}}=0$$ 
+   
    ce qui entraine:
+   
    $$\frac{\partial L}{\partial \vec{v}}=cste$$
+   
    La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vec{v}=cste\). On retrouve ainsi le principe d'inertie (ou première loi de Newton) qui donne le nom à ce genre de référentiel. 
-    </p>
-  <p>
+		</p>
+		<p>
     
-        <h3>Force et Energie</h3>
+	<h3>Force et Energie</h3>
 </article>
 </body>
 </html>

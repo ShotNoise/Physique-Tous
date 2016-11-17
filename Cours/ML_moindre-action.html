@@ -68,13 +68,13 @@
 <h2>Principe de Moindre Action.</h2>
 	<h3>Equation du Mouvement.</h3>
         	<p>
-          Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
-          Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
-          La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
+          	Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
+          	Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
+          	La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
           La donné de l'ensemble des \(q\) à un instant \(t\) n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des \(s\) composantes des vitesses généralisées \(\dot{q}\) sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de newton permettent de calculer les accélérations.
         	</p>
         	<p>
-          Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
+          	Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
         
 		</p>
         	<div class="theoreme">
@@ -136,10 +136,36 @@ Cela se traduit par une variation de l'action
    
    $$\frac{\partial L}{\partial \vec{v}}=cste$$
    
-   La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vec{v}=cste\). On retrouve ainsi le principe d'inertie (ou première loi de Newton) qui donne le nom à ce genre de référentiel. 
-		</p>
+   La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vec{v}=cste\). On retrouve ainsi le principe d'inertie (ou première loi de Newton) qui donne le nom à ce genre de référentiel. Il est possible de pousser plus loin le raisonnement et de trouver la forme exacte d'un lagrangien pour un ensemble de particules sans intéraction.  
+   		</p>
+   	<button data-toggle="collapse" data-target="#demo1">Démonstration:</button>
+	<div id="demo1" class="collapse">
+		Commençons par  le cas d'une seule particule. Le changement de référentiel d'inertie ne doit pas changer la physique que l'on observe. Ainsi les équations du mouvement doivent être inchangées.
+		A ce stade il faut préciser que les équation du mouvement sont inchangée lorsqu'on ajoute au lagrangien une dérivé totale par rapport au temps d'une fonction \(F\) quelconque.
+		En effet dans ce cas l'action s'écrit:
+		$$S'=\int_{t_1}^{t_2}\left(L+\frac{dF}{dt}\right)dt=S+\left[ F\right]_{t_1}^{t_2}$$
+		Le dernier terme étant évalué aux temps \(t_1\) et \(t_2\) il sera nul lors de la variation de l'action.
+		Considérons deux référentiels d'inertie en translation uniforme l'un par rapport à l'autre à une vitesse infinitésimal \(\vec{\epsilon}\). La vitesse de la particule dans le nouveau référentiel est donnée par:
+		$$\vec{v}'=\vec{v}+\vec{\epsilon}$$
+		Le nouveau lagrangien vaut donc:
+		$$L(\vec{v}'^2)=L(v^2+2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^2)$$
+		En développant au premier ordre en \(\epsilon\) on obtient:
+		$$L(\vec{v}'^2)=L(v^2)+2\vec{v}.\vec{\epsilon}\frac{\partial L}{\partial v^2}$$
+		Les équations du mouvement seront inchangées seulement si le deuxième terme du membre de droite peut s'écrire comme une dérivé totale par rapport au temps.
+		Ceci est possible à une seule condition :
+		$$\frac{\partial L}{\partial v^2}=cste$$
+		On en déduit que le lagrangien d'une particule libre s'écrit:
+		$$L=a\vec{v}^2$$
+		Nous verrons au chapitre 2 que pour retrouver les quantités physiques définit durant le cours de mécanique newtonienne on est ammené à identifier la constante \(a\):
+		$$a=\frac{1}{2}m$$
+		Pour un ensemble de particules indépendante le lagrangien total n'est autre que la somme des lagrangiens associés à chaque particules:
+	</div>
+	<div class="theoreme"> 
+   		<header>Lagrangien: Particules Libres</header>
+		$$L=\sum_\alpha \frac{1}{2}m_\alpha \vec{v}_\alpha^2$$
+	</div>	
 		<p>
-    
+    		Précisons qu'un lagrangien est définit à une constante multiplicative prêt. Cette indétermination peut être vue comme un choix des unités utilisées. Par contre le rapport des masses est important. 
 	<h3>Force et Energie</h3>
 </article>
 </body>

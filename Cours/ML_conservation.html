@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../classes/classes.css">
+
+
+</head>
+<body>
+
+<h1 style="text-align:center">La Physique Pour Tous</h1>
+<ul class="home">
+  <li><a class="active" href="../accueil/home.html">Accueil</a></li>
+  <li><a href="#Vulgarisation">Vulgarisation</a></li>
+  <li><a href="../accueil/courses.html">Cours</a></li>
+  <li><a href="#Histoire">Histoire des sciences</a></li>
+</ul>
+
+<nav class="floating">
+  <ul>
+    <li><h3>Mécanique Newtonienne</h3></li>
+    <li><a href="#intro">- Introduction</a></li>
+    <li><a href="#ref">- Référentiel</a></li>
+    <li><a href="#lois">- Lois de Newton</a></li>
+    <li><h3>Relativité Restreinte</h3></li>
+    <li><a href="#time">- Dilatation du temps</a></li>
+    <li><a href="#longueur">- Contraction des longueurs</a></li>
+    <li><h3>Mécanique Lagrangienne</h3></li>
+    <li><a href="ML_moindre-action.html">- Principe de Moindre action</a></li>
+    <li><a href="ML_conservation.html">- Lois de Conservation</a></li>
+    <li><a href="ML_hamilton.html">- Equations Canoniques</a></li>
+  </ul>
+</nav>
+
+<article class="cours" >
+<h2>Lois de Conservation</h2>
+<h3>Conservation de l'Energie</h3>
+	<p>	
+Lors du mouvement d'un système physique les \(2s\) coordonnées \(q_i\) et \(\dot{q_i}\) vont évoluer dans le temps. Leur évolution est régit par les équations d'Euler Lagrange qui forment un système de \(s\) équations couplés du second ordre. La résolution de ce système fait donc apparaître \(2s\) constantes qui doivent être déterminées par les conditions initiales. Certaines de ces constantes on un sens physique plus profond et sont liées à des symétries du problème. Le liens entre les symétries de l'action et les lois de conservation fut formulée par une Mathématicienne, Emmi Noether en 1915. La première grandeur conservée que nous allons étudier viens de l'homogénéité du temps. Cela ce traduit par une invariance de l'action lors d'une translation dans le temps.
+	</p>
+	<button data-toggle="collapse" data-target="#demo">Démonstration:</button>
+	<div id="demo" class="collapse">
+	Dans ce cas le lagrangien ne peut dépendre explicitement du temps:
+	$$\frac{\partial L}{\partial t}=0$$
+	Calculons la dérivé totale du lagrangien par rapport au temps:
+	$$\frac{dL}{dt}=\sum_i \left(\frac{\partial L}{\partial q_i}\dot{q_i}+\frac{\partial L}{\partial \dot{q_i}}\ddot{q_i}\right)$$
+	On peut réécrire le dernier terme sous la forme d'une dérivé totale par rapport au temps:
+	$$\frac{dL}{dt}=\sum_i \left(\frac{\partial L}{\partial q_i}\dot{q_i}-\frac{d}{dt}\frac{\partial L}{\partial \dot{q_i}}\dot{q_i}+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\dot{q_i}\right)\right)$$
+	Les deux premiers termes de droite correspondent à l'équation d'Euler Lagrange. On se retrouve donc avec l'équation suivante:
+	$$\frac{d}{dt}\left(\sum_i \frac{\partial L}{\partial \dot{q_i}}\dot{q_i}-L\right)=0$$
+	</div>
+	<p>
+	On obtient ainsi la conservation d'une quantité que nous identifierons à l'énergie:
+	</p>
+	<div class="theoreme">
+	<header>Définition de l'énergie.</header>
+	<p>
+	$$E=\sum_i \frac{\partial L}{\partial \dot{q_i}}\dot{q_i}-L$$
+	</p>
+	</div>
+	<p>
+	Reprenons le Lagrangien de \(N\) particules en intéraction:
+	$$L(\vec{r},\vec{v})=\sum_{\alpha}\frac{1}{2}m_{\alpha}\vec{v}_{\alpha}^2-U(\vec{r})$$
+	Changeons de variable et exprimons ce Lagrangions avec des coordonnées généralisées. Chaque position est une fonction des coordonnées généralisées \(r_i=f(q)\)
+	Les composantes des vitesses s'exprime de la manière suivante:
+	$$v_i=\frac{dr_i}{dt}=\sum_k \frac{\partial f(q)}{\partial q_k}\dot{q_k}$$
+	Ainsi le Lagrangien peut s'écrire:
+	$$L(q,\dot{q})=\sum_{k,k'}a_{kk'}(q)\dot{q_k}\dot{q_{k'}}-U(q_1,...,q_s)=T(q,\dot{q})-U(q)$$
+	On voit que le premier terme dépend à la fois des positions et des vitesses généralisées alors que le deuxième terme reste une fonction seulement des positions.
+	On injecte ce Lagrangien dans la formule de l'énergie:
+	$$E=\sum_i \frac{\partial T}{\partial \dot{q_i}}\dot{q_i}-T+U$$
+	T étant une fonction homogène d'ordre deux en \(\dot{q}\) on peut utiliser le théorème de Lagrange sur les fonctions homogènes. Ainsi le premier terme du deuxième membre vaut \(2T\). Et l'énergie s'écrit finalement:
+	<div class="theoreme">
+		<header>Energie cinétique et potentielle </header>
+		$$E=T(q,\dot{q})+U(q)$$
+	</div>
+	L'énergie est donc une somme de deux termes, T qui dépend des vitesses et des positions généralisées et qui correspond à l'énergie cinétique des particules. Et U qui dépend seulement des positions qui correspond à l'énergie potentielle.
+	</p>
+<h3>Conservation de l'Impultion</h3>
+	<p>
+Nous avons vue que dans un référentiel d'inertie l'espace est homogène. Ceci entraine la conservation d'une quantité que l'on identifiera à l'impultion totale du système étudié. Supposons que l'on éffectue une petite translation de toute les coordonnées d'une même grandeur \(\delta q\). Le nouveau Lagrangien s'écrit:
+$$L(q+\delta q,\dot{q})=L(q,\dot{q})+\sum_i \delta q \frac{\partial L(q,\dot{q})}{\partial {q_i}} $$
+Pour que le lagrangien soit inchangées le dernier terme doit être nul. En utilisant les équations d'Euler Lagrange on en déduit l'expression suivante:
+$$\frac{d}{dt}\left(\sum_i \frac{\partial L}{\partial \dot{q_i}}\right)=0$$
+La grandeur conservé correspond à l'impultion généralisée totale du système:
+	</p>
+	<div class="theoreme">
+	<header>Impultion généralisée</header>
+	<p>
+	$$P=\sum_i p_i=\sum_i \frac{\partial L}{\partial \dot{q_i}} $$
+	</div>
+	Dans le cas des coordonnées cartésiennes on retrouve la formule bien connue de l'impultion associé à une particule \(\alpha\):
+	$$\vec{p_\alpha}=m_{\alpha}\vec{v_{\alpha}}$$
+	De manière générale l'impultion n'est pas toujours la vitesse que multiplie la masse inertielle de la particule.
+	Les Lois de la physique étant invariantes par changement de référentiel inertiel il est possible de trouver un référentiel dans lequel l'impultion totale est nulle. Choisissons un référentiel en translation uniforme à la vitesse \(\vec{V}\), l'impultion dans ce nouveau référentiel s'écrit:
+	$$P=0=\sum_{\alpha} m_{\alpha}(v_{alpha}-\vec{V})$$
+	On obtient ainsi une vitesse:
+	$$\vec{V}=\frac{\sum_{\alpha}\vec{v}_{\alpha}}{\sum_{\alpha}m_{\alpha}}$$
+	La vitesse \(\vec{V}\) correspond à une moyenne des vitesses des différentes particules pondérées par leur masses. On nomme ce nouveau référentiel le référentiel du centre de masse.
+	
+<h3>Conservation du Moment Cinétique</h3>
+beurk
+
+
+
+</article>
+</body>
+</html>

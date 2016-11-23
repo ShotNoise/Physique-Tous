@@ -39,22 +39,23 @@
     <li><a href="#longueur">- Contraction des longueurs</a></li>
     <li><h3>Mécanique Lagrangienne</h3></li>
     <li><a href="ML_moindre-action.html">- Principe de Moindre action</a></li>
-    <li><a href="#Lois">- Lois de Conservation</a></li>
+    <li><a href="ML_conservation.html">- Lois de Conservation</a></li>
+    <li><a href="ML_hamilton.html">- Equations Canoniques</a></li>
   </ul>
 </nav>
 
 
-<article class="cours" style="height:6000px">
+<article class="cours" >
 <h2>Introduction.</h2>
 	<p>
 	
         La mécanique Lagrangienne n'est en elle même qu'une reformulation de la mécanique Newtonnienne à partir d'un principe que l'on appelle "principe de moindre action".
         Dans ce cours nous reverrons donc tous les concepts introduits dans le cours sur la mécanique Newtonienne. 
-        Même si aucun prérequis n'est strictement nécessaire pour suivre ce cours, il est préférable d'avoir déjà une bonne connaissance des grandeurs utilisées en Mécanique.
+        Même si aucun pré requis n'est strictement nécessaire pour suivre ce cours, il est préférable d'avoir déjà une bonne connaissance des grandeurs utilisées en Mécanique.
         Je conseil donc de commencer votre lecture par la mécanique Newtonienne.
 	</p>
 	<p>
-        Présenté comme cela on pourrait avoir l'impression que la mécanique Lagrangienne est de peu d'intérêt. Détrompez-vous.
+	Présenté comme cela on pourrait avoir l'impression que la mécanique Lagrangienne est de peu d'intérêt. Détrompez vous.
         Premièrement cette formulation de la mécanique va pouvoir être reprise dans d'autres domaines de la physique comme l'optique géométrique ou l'électromagnétisme unifiant ainsi différant concepts.
         De plus nous verrons dans des cours plus avancés que le formalisme lagrangien permet un passage élégant vers la mécanique quantique.
 	</p>
@@ -68,13 +69,13 @@
 <h2>Principe de Moindre Action.</h2>
 	<h3>Equation du Mouvement.</h3>
         	<p>
-          Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
-          Il est possible de généraliser toute la discution suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
-          La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrès de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
-          La donné de l'ensemble des \(q\) à un instant \(t\) n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des \(s\) composantes des vitesses généralisées \(\dot{q}\) sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de newton permettent de calculer les accélérations.
+          	Pour commencer nous allons nous restreindre à des systèmes composés d'un ensemble de particules ponctuelles. 
+          	Il est possible de généraliser toute la discutions suivante au cas des solides en ajoutant des degrés de liberté internes correspondant au différentes rotations possible du solide.
+          	La position de toute les particules d'un système de \(N\) particules est donnés par les \(3N\) coordonnées des particules. Dans la plupart des systèmes il est possible de faire des hypothèses sur le mouvement des particules considérées. Les particules peuvent par exemple se déplacer seulement dans un plan (comme c'est le cas pour une planète autour du soleil). Dans ce cas on dit que le système est contraint, le nombre de degrés de libertés \(s\) nécessaire pour le décrire est donc en générale plus faible que les \(3N\) coordonnées. On utilise alors un autre jeux de coordonnées appelé coordonnées généralisées et notées: \( (q_1,q_2,...,q_s)\). 
+          La donné de l'ensemble des \(q\) à un instant \(t\) n'est pas suffisante pour déterminer les positions à un instant ultérieur. L'expérience nous apprends que la connaissance supplémentaire des \(s\) composantes des vitesses généralisées \(\dot{q}\) sont suffisantes pour prédire la trajectoire du système. En effet comme nous l'avons vue dans le cour de mécanique Newtonienne les équations de Newton permettent de calculer les accélérations.
         	</p>
         	<p>
-          Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
+          	Supposons qu'il existe une fonction \(L(q,\dot{q},t)\) dépendant du temps des coordonnées et des vitesses généralisées qui décrit le système à un instant t. Considérons maintenant une trajectoire dans l'espace des phases entre deux temps \(t_1\) et \(t_2\) on définit l'action comme l'intégrale du Lagrangien entre ces deux instants:
         
 		</p>
         	<div class="theoreme">
@@ -85,13 +86,13 @@
         	</div>
         	<p>
 
-          L'action décrit une trajectoire particulière que le système peut suivre dans l'espace des phases et qui dépend de l'ensemble des positions et vitesses généralisés au différents instant entre \(t_1\) et \(t_2\). Le principe de moindre action stipule que parmis l'ensemble des trajectoires de l'espace des phases, la trajectoire emprunté par le système est celle qui minimise (ou maximise) l'action. En résumé le principe de moindre action ce compose de deux hypothèses l'existance du Lagrangien (et de l'action) et le fait que le système suit toujours une trajectoire qui minimise l'action. A partir de ce principe de moindre action on peut trouver des équations du mouvement qui regissent la trajectoire du système:
+          L'action décrit une trajectoire particulière que le système peut suivre dans l'espace des phases et qui dépend de l'ensemble des positions et vitesses généralisés au différents instant entre \(t_1\) et \(t_2\). Le principe de moindre action stipule que parmi l'ensemble des trajectoires de l'espace des phases, la trajectoire emprunté par le système est celle qui minimise (ou maximise) l'action. En résumé le principe de moindre action ce compose de deux hypothèses l'existence du Lagrangien (et de l'action) et le fait que le système suit toujours une trajectoire qui minimise l'action. A partir de ce principe de moindre action on peut trouver des équations du mouvement qui régissent la trajectoire du système:
         	</p>
   
        		<button data-toggle="collapse" data-target="#demo">Démonstration:</button>
 
 		<div id="demo" class="collapse">
-          D'un point de vue mathematique on traduit le principe de moindre action par un principe variationel. Supposons que la trajectoire qui minimise l'action soit donnée par un ensemble de coordonnées et vitesses généralisées \( (Q,\dot{Q})\) et faisons varier une des coordonnés généralisé de \(\delta q_i\) autour de l'équilibre en gardant les extrémités de la trajectoire fixes:
+          D'un point de vue mathématique on traduit le principe de moindre action par un principe variationnel. Supposons que la trajectoire qui minimise l'action soit donnée par un ensemble de coordonnées et vitesses généralisées \( (Q,\dot{Q})\) et faisons varier une des coordonnés généralisé de \(\delta q_i\) autour de l'équilibre en gardant les extrémités de la trajectoire fixes:
 
         $$q_i=Q_i+\delta q_i$$
         $$\dot{q}_i=\dot{Q_i}+\delta \dot{q_i}$$
@@ -125,7 +126,7 @@ Cela se traduit par une variation de l'action
  		<p>  
 	<h3>Référentiels d'Inertie</h3>
 		<p>
-  Afin de décrire un mouvement nous avons besoin de définir un système d'axe permettant de repérer la position des particules. Ce système d'axe est appelé référentiel. Il y a une infinité de choix de référentiel possible mais il éxiste certain référentiels dans lesquels le temps et l'espace sont homogène et isotrope. On appelle ces référentiels des référentiels d'inertie, il sont très prisés des physiciens car les lois de la physique s'y expriment sous une forme simplifié. 
+  Afin de décrire un mouvement nous avons besoin de définir un système d'axe permettant de repérer la position des particules. Ce système d'axe est appelé référentiel. Il y a une infinité de choix de référentiel possible mais il existe certain référentiels dans lesquels le temps et l'espace sont homogène et isotrope. On appelle ces référentiels des référentiels d'inertie, il sont très prisés des physiciens car les lois de la physique s'y expriment sous une forme simplifié. 
 		</p>
 		<p>
     Prenons l'exemple d'une particule isolée dans un tel référentiel. Puisque l'espace est homogène les lois de la physique ne doivent pas dépendre de la position de la particule. De plus l'espace est également isotrope on en déduit que le lagrangien est uniquement fonction du module de la vitesse ou encore du carré de la vitesse de la particule, \(L(v^2)\). En injectant ce lagrangien dans les équations d'Euler Lagrange on obtient:
@@ -136,11 +137,60 @@ Cela se traduit par une variation de l'action
    
    $$\frac{\partial L}{\partial \vec{v}}=cste$$
    
-   La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vec{v}=cste\). On retrouve ainsi le principe d'inertie (ou première loi de Newton) qui donne le nom à ce genre de référentiel. 
-		</p>
+   La constante doit être comprise au sens de indépendant du temps. On en déduit que la vitesse de la particule est constante \(\vec{v}=cste\). On retrouve ainsi le principe d'inertie (ou première loi de Newton) qui donne le nom à ce genre de référentiel. Il est possible de pousser plus loin le raisonnement et de trouver la forme exacte d'un lagrangien pour un ensemble de particules sans interaction.  
+   		</p>
+   	<button data-toggle="collapse" data-target="#demo1">Démonstration:</button>
+	<div id="demo1" class="collapse">
+		Commençons par  le cas d'une seule particule. Le changement de référentiel d'inertie ne doit pas changer la physique que l'on observe. Ainsi les équations du mouvement doivent être inchangées.
+		A ce stade il faut préciser que les équation du mouvement sont inchangée lorsqu'on ajoute au lagrangien une dérivé totale par rapport au temps d'une fonction \(F\) quelconque.
+		En effet dans ce cas l'action s'écrit:
+		$$S'=\int_{t_1}^{t_2}\left(L+\frac{dF}{dt}\right)dt=S+\left[ F\right]_{t_1}^{t_2}$$
+		Le dernier terme étant évalué aux temps \(t_1\) et \(t_2\) il sera nul lors de la variation de l'action.
+		Considérons deux référentiels d'inertie en translation uniforme l'un par rapport à l'autre à une vitesse infinitésimal \(\vec{\epsilon}\). La vitesse de la particule dans le nouveau référentiel est donnée par:
+		$$\vec{v}'=\vec{v}+\vec{\epsilon}$$
+		Le nouveau lagrangien vaut donc:
+		$$L(\vec{v}'^2)=L(v^2+2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^2)$$
+		En développant au premier ordre en \(\epsilon\) on obtient:
+		$$L(\vec{v}'^2)=L(v^2)+2\vec{v}.\vec{\epsilon}\frac{\partial L}{\partial v^2}$$
+		Les équations du mouvement seront inchangées seulement si le deuxième terme du membre de droite peut s'écrire comme une dérivé totale par rapport au temps.
+		Ceci est possible à une seule condition :
+		$$\frac{\partial L}{\partial v^2}=cste$$
+		On en déduit que le lagrangien d'une particule libre s'écrit:
+		$$L=a\vec{v}^2$$
+		Nous verrons au chapitre 2 que pour retrouver les quantités physiques définit durant le cours de mécanique newtonienne on est emmené à identifier la constante \(a\):
+		$$a=\frac{1}{2}m$$
+		Pour un ensemble de particules indépendante le lagrangien total n'est autre que la somme des lagrangiens associés à chaque particules:
+	</div>
+	<div class="theoreme"> 
+   		<header>Lagrangien: Particules Libres</header>
+		$$L=\sum_\alpha \frac{1}{2}m_\alpha \vec{v}_\alpha^2$$
+	</div>	
 		<p>
-    
-	<h3>Force et Energie</h3>
+    		Précisons qu'un lagrangien est définit à une constante multiplicative prêt. Cette indétermination peut être vue comme un choix des unités utilisées. Par contre le rapport des masses est important. 
+	<h3>Particules en Interaction</h3>
+	Considérons maintenant un ensemble de particules interagissant entre elles mais sans force extérieur. On qualifie ce genre de système de fermé. L'expérience nous suggère que l'interaction entre les particule en mécanique classique dépend seulement de la distance entre les particules. Le lagrangien précédant peut donc être simplement modifié pour tenir compte des interactions:
+
+	</div>
+	<div class="theoreme"> 
+   		<header>Lagrangien: Particules en interactions </header>
+		$$L=\sum_\alpha \frac{1}{2}m_\alpha \vec{v}_\alpha^2-U(\vec{r}_\alpha)$$
+	</div>	
+	La forme de la fonction \(U\) dépend de l'interaction en jeu. En coordonné cartésienne on peut exprimer les équations d'Euler Lagrange sous la forme d'équations vectorielles en regroupant les coordonnées appartenant à la même particule:
+	
+        $$\frac{\partial L}{\partial \vec{r}}-\frac{d}{dt}\frac{\partial L}{\partial \vec{v}}=0$$
+	
+	On obtient ainsi N équations vectorielles, une par particule.
+	Formellement les dérivés par rapport à un vecteur correspondent aux opérateurs gradient. En injectant dans cette équation le Lagrangien pour des particules en interaction dans ces équations on trouve:
+
+	</div>
+	<div class="theoreme"> 
+   		<header>Deuxième loi de Newton </header>
+		$$\frac{d}{dt}m_\alpha\vec{v}_{\alpha}=-\vec{\nabla} U=\sum \vec{F}$$
+	</div>	
+	où la somme s'effectue sur l'ensemble des forces s'exerçant sur la particule \(\alpha\).
+	On retrouve ainsi la deuxième loi de Newton.
+	On peut généralisé cette discution au cas de coordonnées généralisé ceci nous permet de définir une force généralisé:
+	$$F_i=\frac{\partial L}{\partial q_i}$$
 </article>
 </body>
 </html>

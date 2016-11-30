@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../classes/classes.css">
+</head>
+
+<body>
+<h1 style="text-align:center">La Physique Pour Tous</h1>
+<ul class="home">
+    <li><a class="active" href="../accueil/home.html">Accueil</a></li>
+    <li><a href="#Vulgarisation">Vulgarisation</a></li>
+    <li><a href="../accueil/courses.html">Cours</a></li>
+    <li><a href="#Histoire">Histoire des sciences</a></li>
+</ul>
+
+<nav class="floating">
+    <ul>
+        <li><h3>Physique Statistique</h3></li>
+        <li><a href="#intro">- Introduction</a></li>
+        <li><h3>Principes fondamentaux</h3></li>
+        <li><a href="PS_Partition.html">- Partition de l'énergie</a></li>
+    </ul>
+</nav>
+
+<article class="cours" >
+<h2>Partition de l'énergie</h2>
+    <h3>Hypothèse fondamentale</h3>
+        <p>
+            L'hypothèse fondamentale de la physique statistique se résume en une
+            formule.
+	    </p>
+        <div class="theoreme">
+            <header>Hypothèse fondamentale</header>
+            <p>
+                Dans un système physique contenant plusieurs degrés de liberté,
+                toutes les configurations (micro-états) sont équiprobables.
+            </p>
+        </div>
+            <p>
+                Sans faire de caricature, cela veut dire par exemple que si l'on
+                considère des molécules d'un gaz parfait (sans interactions) dans
+                une enceinte fermée, la configuration où toutes les molécules se
+                retrouvent dans un coin est aussi probable que celle où elles sont
+                parfaitement réparties dans l'enceinte.
+            </p>
+    <h3>Grand nombre de degrés de liberté</h3>
+        <p>
+            La physique statistique s'intéresse à des systèmes avec un grand nombre
+            de degrés de liberté (typiquement, un système contenant de l'ordre de
+            quelques \(10^{23}\) particules ayant chacune une vitesse en trois
+            dimensions et éventuellement en interaction les unes avec les autres).
+            La loi des (très) grands nombres assure alors que le système tend à se
+            trouver avec une (très) grande probabilité dans une configuration proche
+            de la configuration "moyenne", appellée configuration d'équilibre. Pour
+            reprendre l'exemple ci-dessus, cela veut dire qu'il y a (beaucoup) plus
+            de configurations proches de celle où les molécules de gaz sont bien
+            réparties dans l'enceinte que de celle où elles sont regroupées dans un
+            coin. Cette dernière situation a donc (très) peu de chances d'être
+            observée dans un système réel.
+        </p>
+    <h3>Fonctions de l'énergie interne</h3>
+        <p>
+            Nous abordons maintenant le sujet de manière quantitative.
+            On commence par regrouper les micro-états en fonction
+            d'une variable globale commode: l'énergie interne totale du système,
+            \(u\). On définit donc \(g(u)\), le nombre de micro-états d'énergie
+            interne totale \(u\). Si le nombre de micro-états possible est très
+            grand, les lois de la statistique assurent que la fonction \(g\) est
+            très piquée autour d'une valeur \(u^*\). Le système sera donc "à
+            l'équilibre" avec une énergie très proche de \(u^*\), en ce sens que
+            la probabilité d'observer le système dans une configuration d'énergie
+            éloignée de \(u^*\) est infinitésimale.
+        </p>
+        <p>
+            Si on considère un spectre énergétique discret \(\{u_i\}\), l'hypothèse
+            fondamentale formulée ci-dessus implique que la probabilité d'observer
+            le système avec une énergie particulière \(u_i\) est
+            \[P(u_i)=\frac{g(u_i)}{\sum_jg(u_j)}.\]
+        </p>
+        <p>
+            Si on considère un spectre énergétique continu, la probabilité d'observer
+            le système avec une énergie comprise entre \(u\) et \(u+du\) est
+            \[dP(u)=\frac{g(u)du}{\int g(v)dv}.\]
+        </p>
+        <p>
+            Dans la suite, nous priviligierons le cas discret pour simplifier les
+            notations.
+        </p>
+    <h3>Entropie</h3>
+        <p>
+            L'entropie est définie comme
+            \[S(u)=k_B\,\ln[g(u)],\]
+            où \(k_B=1.3806488\times10^{-23}\;\textrm{J}.\textrm{K}^{-1}\) est la
+            <a "https://fr.wikipedia.org/wiki/Constante_de_Boltzmann">constante de Boltzmann</a>.
+        </p>
+        <p>
+            Pourquoi utiliser le logarithme? La littérature scientifique donne
+            parfois comme réponse le fait que le nombre de micro-états d'un système
+            réaliste est très grand (autrement dit, \(g\) est une fonction qui prend
+            des valeurs très élevées). Prendre le logarithme assure qu'on travaille
+            avec des valeurs plus petites, donc plus faciles à aborder.
+            Cette explication peut sembler intéressante, mais elle ne prend pas
+            en compte une propriété très importante de la fonction logarithme, qui
+            est de transformer la multiplication en addition. En effet, si on
+            considère deux systèmes séparés comme un seul plus gros système, le
+            nombre de micro-états pour lesquels l'énergie du premier système est
+            \(u_1\) et celle du second système est \(u_2\) est simplement le produit
+            \(g(u_1,u_2)=g_1(u_1)g_2(u_2)\). L'entropie totale du système est donc
+            \(S(u_1,u_2)=S_1(u_1)+S_2(u_2)\). On dit que l'entropie est une variable
+            additive, ou extensive.
+        <p>
+        <p>
+            Une fois ces définitions posées, l'hypothèse fondamentale et les lois
+            de la statistique (voir ci-dessus) mènent à une conclusion très importante
+            sur la valeur de l'entropie à l'équilibre.
+        </p>
+        <div class="theoreme">
+            <header>Entropie à l'équilibre</header>
+            <p>
+                L'entropie d'un système est maximale à l'équilibre.
+            </p>
+        </div>
+        <p>
+            Le nombre de micro-états proches de l'équilibre étant très élevé,
+            on associe souvent l'état d'équilibre au désordre. Pour reprendre
+            l'exemple de l'enceinte remplie d'un gaz parfait, il existe peu de
+            configurations bien ordonnées (par exemple avec les molécules toutes
+            placées dans un seul coin), par comparaison au nombre gigantesque
+            de configurations désordonnées proche de l'équilibre. L'entropie d'un
+            système est donc une mesure de son désordre. La
+            <a href="https://fr.wikipedia.org/wiki/Entropie_de_Shannon"> théorie de l'information</a>
+            formulée par Claude Shannon est d'ailleurs fondée sur cette notion.
+        </p>
+    <h3>Température</h3>
+        <p>
+            Dans cette partie, on considère deux systèmes initialement séparés. On
+            les met en contact en leur permettant d'échanger de l'énergie, mais pas
+            des degrés de liberté (par exemple, toutes les particules doivent
+            rester dans leur système d'origine). Par la suite, on parlera pour ce
+            modèle
+            d'<a href="https://fr.wikipedia.org/wiki/Ensemble_canonique">ensemble canonique</a>
+            de la thermodynamique. Il va nous permettre de définir une quantité
+            physique importante, la température.
+        </p>
+        <p>
+            Lorsqu'on met en contact les deux systèmes, ils forment un nouveau
+            système qui atteint un nouvel état d'équilibre en maximisant son
+            entropie. On note \(u=u_1+u_2\) l'énergie du gros système. C'est
+            une constante du système, et seule sa répartition entre \(u_1\) et
+            \(u_2\) peut changer. On note \(u_1^*\) et \(u_2^*\) les énergies
+            à l'équilibre. Puisque l'entropie est maximale à l'équilibre,
+            on doit avoir
+            \[\left.\frac{\partial S}{\partial u_1}\right\rvert_{u_1^*}
+            =\left.\frac{\partial S_1}{\partial u_1}\right\rvert_{u_1^*}
+            +\left.\frac{\partial S_2}{\partial u_1}\right\rvert_{u_1^*}
+            =\left.\frac{\partial S_1}{\partial u_1}\right\rvert_{u_1^*}
+            -\left.\frac{\partial S_2}{\partial u_2}\right\rvert_{u_2^*}=0.\]
+        </p>
+        <p>
+            Cela permet de définir une variable thermodynamique qui caractérise
+            le gros système à l'équilibre. Il s'agit de la température \(T\),
+            définie comme
+            \[\left.\frac{\partial S_1}{\partial u_1}\right\rvert_\textrm{éq.}
+            =\left.\frac{\partial S_2}{\partial u_2}\right\rvert_\textrm{éq.}
+            =\frac{1}{T}.\]
+            Le fait que la température existe (c'est-à-dire qu'elle est
+            définie de manière unique, quelque soit la partition qu'on fasse
+            du gros système en deux sous-systèmes pouvant échanger de
+            l'énergie) est une manière élégante de formuler le
+            <a href="https://fr.wikipedia.org/wiki/Principe_z%C3%A9ro_de_la_thermodynamique">principe zéro de la thermodynamique</a>.
+            Une autre manière de la formuler (celle que l'on
+            trouve souvent dans les livres de physique) est de dire que
+            si deux systèmes sont en équilibre thermique avec un troisième,
+            ils sont à l'équilibre thermique entre eux. Autrement dit, ils sont
+            tous les trois à la même température.
+        </p>
+    <h3>Partition de l'énergie</h3>
+        <p>
+            Nous sommes maintenant prêts à démontrer l'une des formules les plus
+            utiles de la physique statistique, celle de la partition de l'énergie.
+        </p>
+        <p>
+            Pour ce faire, nous considérons de nouveaux deux systèmes initialement
+            séparés. \(S_1\) possède un très grand nombre de degrés de liberté et
+            une énergie interne très grande. On note \(T\) sa température et
+            \(u_1^*\) son énergie interne à l'équilibre avant mise en contact avec
+            \(S_2\), un système beaucoup plus petit. Le spectre énergétique de
+            \(S_2\) est considéré discret et noté \(\{\epsilon_i\}\) avec
+            \(\epsilon_i\ll u_1^*\;\forall i\). On note enfin, comme ci-dessus,
+            \(\{g_i\}\) les degrés de dégénerescence du spectre énergétique de
+            \(S_2\). On suppose qu'avant mise en contact \(S_2\) est dans un état
+            d'énergie \(epsilon^*\).
+        </p>
+        <p>
+            On pose la question suivante: quelle est la probabilité que l'énergie
+            de \(S_2\) soit \(\epsilon_i\) après mise en contact avec \(S_1\)?
+            Si \(S_2\) possède l'énergie \(\epsilon_i\), \(S_1\) possède l'énergie
+            \(u_1^*+\epsilon^*-\epsilon_i\). L'entropie totale est donc
+            \[S(\epsilon_i)=S_2(\epsilon_i)+S_1(u_1^*+\epsilon^*-\epsilon_i).\]
+            Un développement au premier ordre en \(\epsilon^*-\epsilon_i\) donne
+            alors
+            \[S(\epsilon_i)=S_2(\epsilon_i)+S_1(u_1^*)+(\epsilon^*-\epsilon_i)
+            \left.\frac{\partial S_1}{\partial u_1}\right\rvert_{u_1^*}.\]
+            En utilisant la définition de l'entropie et celle de la température
+            \(T\), on a alors
+            \[S(\epsilon_i)=k_B\,\ln(g_i)+S_1(u_1^*)+\frac{\epsilon^*-\epsilon_i}{T}.\]
+            Enfin, on applique la loi de probabilité définie plus haut pour obtenir
+            \[P(\epsilon_i)=\frac{\exp[S(\epsilon_i)/k_B]}{\sum_j\exp[S(\epsilon_j)/k_B]}
+            =\frac{e^{-\epsilon_i/k_BT}}{\sum_je^{-\epsilon_j/k_BT}}.\]
+        </p>
+        <p>
+            On définit donc la fonction de partition de l'énergie
+            <div class="theoreme">
+                <header>Fonction de partition de l'énergie</header>
+                <p>
+                    \[Z_\epsilon=\sum_je^{-\epsilon_j/k_BT},\quad\textrm{ou}\]
+                    \[Z_\epsilon=\int e^{-u/k_BT}du.\]
+                </p>
+            </div>
+            La probabilité qu'un système en équilibre thermique à la température
+            \(T\) possède une énergie \(\epsilon_i\) pour le cas discret, ou
+            comprise entre \(u\) et \(u+du\) dans le cas continu est alors
+            <div class="theoreme">
+                <header>Probabilité associée à une énergie donnée pour un
+                système à l'équilibre thermique à tempréature \(T\)</header>
+                <p>
+                    \[P(\epsilon_i)=\frac{1}{Z_\epsilon}\;e^{-\epsilon_i/k_BT},\quad\textrm{ou}\]
+                    \[dP(u)=\frac{1}{Z_\epsilon}\;e^{-u/k_BT}du.\]
+                </p>
+            </div>
+        </p>
+        <p>
+            On note souvent \(\beta=1/k_BT\). La fonction de partition peut être
+            calculée dans un certain nombre de cas "classiques", et elle permet
+            de calculer des quantités intéressantes, comme l'énergie interne
+            moyenne à l'équilibre thermique
+            \[\langle\epsilon\rangle=-\frac{1}{Z_\epsilon}\;\frac{\partial Z_\epsilon}{\partial\beta}.\]
+        </p>
+        <button data-toggle="collapse" data-target="#demo">Démonstration:</button>
+        <div id="demo" class="collapse">
+            \[\begin{split}
+              \langle\epsilon\rangle&=\sum_i\epsilon_i\,P(\epsilon_i)\\
+              &=\frac{1}{Z_\epsilon}\sum_i\epsilon_i\,e^{-\beta\epsilon_i};
+              \end{split}\]
+            \[\frac{\partial Z_\epsilon}{\partial\beta}=-\sum_i\epsilon_i\,e^{-\beta\epsilon_i}.\]
+		</div>
+</article>
+
+</body>
+
+</html>

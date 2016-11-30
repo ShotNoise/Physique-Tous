@@ -47,8 +47,64 @@
 <article class="cours" >
 <h2>Equations Canonique</h2>
 <h3>Transformation de Legendre</h3>
-<h3>Crochet de Poisson</h3>
+<p>
+La formulation de la mécanique lagrangienne faites précédemment utilise les coordonnées et vitesses généralisées pour décrire le mouvement d'un système mais ce n'est pas un choix unique. Un autre choix utile est d'utiliser les impultions généralisées à la place des vitesses. Cette reformulation présente l'avantage de transformer les \(s\) équations d'Euler-Lagrange qui sont du second ordre en \(2s\) équations du premier ordre qui permet de découpler les variables de position et d'impultion.
+</p>
+<p>
+Le changement de variable ce fait par une transformation de Legendre qui permet de transformer le Lagrangien \(L(q,\dot{q})\) en une nouvelle fonction appelé Hamiltonnien \(H(q,p)\).
+</p>
+	<button data-toggle="collapse" data-target="#demo">Démonstration:</button>
 
+	<div id="demo" class="collapse">
+		<p>
+		La différentielle du Lagrangien s'écrit de la manière suivante:
+		$$dL=\sum_i\left( \frac{\partial L}{\partial q_i} dq_i+\frac{\partial L}{\dot{q_i}}d\dot{q}_i\right)$$
+		On peut réécrire cette équation à l'aide de la définition de l'impultion et des équation d' Euler-Lagrange:
+		$$dL=\sum_i\left(\dot{p_i}dq_i+p_id\dot{q_i}\right)$$
+		Le deuxième terme de la somme peut s'exprimer à l'aide d'une différentielle totale.
+		$$dL=\sum_i\left(\dot{p_i}dq_i+d(p_i\dot{q}_i)-\dot{q_i}dp_i \right)$$
+		En regroupant les différentielles totale on obtient:
+		$$d(\sum_i \dot{q}_ip_i-L)=dH=\sum_i\left(-\dot{p_i}dq_i+\dot{q_i}dp_i \right)$$
+		On voit que la différentielle de la fonction de Hamilton notée \(H\) s'exprime comme une différentielle des \(q\) et \(p\). On a donc bien transformé une fonction de \((q,\dot{q})\) en une fonction de \((q,p)\).
+		</p>
+	</div>
+
+	<div class="theoreme">
+		<header>Forme de l'hamiltonien:</header>
+ 	 	<p>
+		$$H(q,p)=\sum_i p_i\dot{q}_i-L$$
+		
+	Les \(s\) équations du mouvement sont finalement modifiées et remplacées par \(2s\) équations dites de Hamilton:
+		
+	$$\dot{q}_i=\frac{\partial H}{\partial p_i};\dot{p}_i=-\frac{\partial H}{\partial q_i}$$
+	</div>	
+	<p>
+	L'évolution dans le temps du Hamiltonien nous donne:
+	$$\frac{dH}{dt}=\frac{\partial H}{\partial t}+\sum_i \left(\frac{\partial H}{\partial q_i}+\frac{\partial H}{\partial p_i}\right)$$
+	La somme s'annule du fait des équations de Hamilton:
+	$$\frac{dH}{dt}=\frac{\partial H}{\partial t}$$
+	Si l'Hamiltonien ne dépend pas du temps on retrouve la conservation de l'énergie.
+	</p>
+<h3>Crochet de Poisson</h3>
+<p>
+Considérons une fonction \(F\) des positions, impultion et du temps. L'évolution dans le temps de cette fonction est donné par:
+$$\frac{dF}{dt}=\frac{\partial F}{\partial t}+\sum_i \left(\frac{\partial F}{\partial q_i}\frac{\partial q_i}{\partial t}+\frac{\partial F}{\partial p_i}\frac{\partial p_i}{\partial t}\right)$$
+
+En utilisant les équations de Hamilton on peut écrire:
+
+$$\frac{dF}{dt}=\frac{\partial F}{\partial t}+\sum_i \left(\frac{\partial F}{\partial q_i}\frac{\partial H}{\partial p_i}+\frac{\partial F}{\partial p_i}\frac{\partial H}{\partial q_i}\right)$$
+
+Le terme de somme est ce que l'on définit comme les crochets de poisson qui permettent d'exprimer l'évolution dans le temp d'une fonction \(F(q,p,t)\):
+	
+	<div class="theoreme">
+	<header>Evolution dans le temps:</header>
+
+	$$\frac{dF}{dt}=\frac{\partial F}{\partial t}+(F,H)$$
+
+	</div>
+
+
+</p>
 </article>
 </body>
 </html>
